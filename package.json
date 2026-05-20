@@ -1,0 +1,46 @@
+{
+  "name": "rag-agent-typescript",
+  "version": "1.0.0",
+  "description": "A simple RAG (Retrieval-Augmented Generation) agent using TypeScript, Groq, and Pinecone",
+  "main": "dist/src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "USE_ONNX_WASM=1 tsx src/index.ts",
+    "api": "USE_ONNX_WASM=1 tsx src/api-index.ts",
+    "api:watch": "USE_ONNX_WASM=1 tsx watch src/api-index.ts",
+    "upsert": "USE_ONNX_WASM=1 tsx scripts/upsert-docs.ts",
+    "build": "tsc",
+    "start": "node dist/src/index.js"
+  },
+  "keywords": [
+    "RAG",
+    "TypeScript",
+    "Groq",
+    "Pinecone",
+    "AI"
+  ],
+  "author": "micheal",
+  "license": "MIT",
+  "dependencies": {
+    "@huggingface/transformers": "^4.2.0",
+    "@pinecone-database/pinecone": "^3.0.0",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "canvas": "^3.2.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.3.1",
+    "express": "^5.2.1",
+    "groq-sdk": "^0.5.0",
+    "onnxruntime-node": "^1.26.0",
+    "pdfjs-dist": "^5.7.284",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.19.41",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
