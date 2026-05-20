@@ -6,7 +6,7 @@ interface ChatMessageProps {
   sources?: Source[];
 }
 
-export default function ChatMessage({ role, content, sources }: ChatMessageProps) {
+export default function ChatMessage({ role, content }: ChatMessageProps) {
   const isUser = role === 'user';
 
   return (
